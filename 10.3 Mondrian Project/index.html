@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+   body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0; 
+
+   }
+   .grid-container{
+    display: grid;
+    background-color: tan;
+    grid-template-rows: 1fr 1fr 0.5fr 0.5fr 0.1fr;
+    grid-template-columns: 1fr 1.5fr 1.5fr 1.5fr 0.2fr;
+    height :748px;
+    width: 748px;
+   }
+
+   .red{
+    background-color: #E72F24;
+    grid-row: span 2;
+    grid-column: span 2;
+    border: 5px solid black;
+   }
+   .black{
+    background-color: #232629;
+    order: 3; 
+    border: 5px solid black;
+   }
+   .blue{
+     background-color: #004592;
+     border: 5px solid black;
+   }
+   .yellow{
+    background-color: #F9D01E;
+    order:2;
+    border: 5px solid black;
+   }
+   .grey{
+    background-color:#F0F1EC ;
+    border: 5px solid black;
+   }
+   .grey-right{
+    grid-row: span 2;
+    grid-column: span 3;
+   }
+   .grey-bottom-left{
+    grid-row: span 2;
+    grid-column: span 2;
+   }
+   .grey-bottom-center{
+     grid-row: span 2;
+     grid-column: span 2;
+   }
+  
+   .final-grey{
+    order: 4;
+    grid-row-start: -1;
+    grid-column-start: 5;
+    grid-row-end: 4;
+
+   }
+
+   .extra-grey{
+    order:1;
+    grid-column: span 2
+
+   }
+
+  
+   
+   
+  </style>
+</head>
+
+<body>
+  <!-- Write your HTML here -->
+  <div class="grid-container">
+    <div class="red"></div>
+    <div class="grey-right grey"></div>
+    <div class="grey-bottom-left grey"></div>
+    <div class="grey-bottom-center grey"></div>
+    <div class="blue"></div>
+    <div class="yellow"></div>
+    <div class="black"></div>
+    <div class="grey extra-grey"></div>
+    <div class="final-grey grey"></div>
+  </div>
+</body>
+
+</html>
